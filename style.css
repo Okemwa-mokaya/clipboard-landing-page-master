@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+:root{
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+svg{
+  max-width: 100%;
+}
+body{
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  /*display: grid;*/
+  /*place-content: center;*/
+  min-height: 100vh;
+  max-width: 1440px;
+  min-width: 400px;
+}
+main{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4cm;
+  margin: auto;
+  width: 90%;
+}
+section{
+  width: 90%;
+  margin: auto;
+}
+.section1 .topclip{
+  margin-top: 3cm;
+  margin-bottom: 2cm;
+}
+h1,
+h2,
+h3{
+  color: var(--Dark-Grayish-Blue);
+  font-weight: 600;
+  margin-bottom: 1cm;
+}
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 35px;
+}
+h3{
+  font-size: 25px;
+}
+p{
+  font-size: 22px;
+  color: var(--Grayish-Blue);
+  margin-bottom: 2cm;
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1cm;
+}
+button{
+  width: 90%;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+.ios{
+  background-color: var(--Strong-Cyan);
+  box-shadow: 0 0.2cm 0.1cm rgba(14, 20, 20, 0.35);
+}
+.mac{
+  background-color: var(--Light-Blue);
+  box-shadow: 0 0.2cm 0.1cm rgba(14, 20, 20, 0.35);
+}
+.computer{
+  margin-bottom: 2cm;
+}
+.devices{
+  margin-bottom: 1.5cm;
+}
+.blacklist,
+.text,
+.preview{
+  margin-bottom: 1cm;
+}
+.section4{
+  display: grid;
+  justify-content: center;
+  gap: 1.5cm;
+}
+footer{
+  margin-top: 4cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1cm;
+  background-color: hsla(201, 26%, 87%, 0.8);
+  padding-top: 1cm;
+  padding-bottom: 1cm;
+}
+.bottomclip{
+  display: grid;
+  width: 40px;
+  height: 40px;
+}
+.lists{
+  list-style-type: none;
+  display: grid;
+  gap: 1cm;
+}
+a{
+  text-decoration: none;
+  color: var(--Dark-Grayish-Blue);
+  font-weight: 600;
+  text-align: center;
+}
+.socials{
+  display: flex;
+  gap: 1cm;
+}
+.ios:hover{
+  cursor: pointer;
+  background-color: hsl(173, 63%, 67%);
+}
+.mac:hover{
+  cursor: pointer;
+  background-color: hsl(233, 60%, 69%);
+}
+a:hover{
+  cursor: pointer;
+  color: aqua;
+}
+a img:hover{
+  cursor: pointer;
+  filter: invert(62%) sepia(52%) saturate(548%) hue-rotate(122deg) brightness(88%) contrast(94%);
+}
+
+@media (min-width: 1000px) {
+  body{
+    background-image: url(images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .heading{
+    width: 70%;
+    margin: auto;
+  }
+  h1{
+    font-size: 48px;
+  }
+  h2{
+    font-size: 43px;
+  }
+  h3{
+    font-size: 33px;
+  }
+  p{
+    font-size: 22px;
+    line-height: normal;
+  }
+  .btns{
+    flex-direction: row;
+  }
+  button{
+    width: auto;
+    padding: 10px 20px;
+  }
+  .section2{
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+  .section2 .heading{
+    grid-column: 1/3;
+  }
+  .computer{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: fit-content;
+    margin-left: -4cm;
+    
+    height: 100%;
+  }
+  .options{
+    text-align: start;
+    height: -30px;
+  }
+  .section3 .infos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .blacklist,
+  .text,
+  .preview{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1cm;
+    object-fit: contain;
+  }
+  .section4{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .lists{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 40%;
+  }
+  a{
+    text-align: start;
+  }
+}
+  
